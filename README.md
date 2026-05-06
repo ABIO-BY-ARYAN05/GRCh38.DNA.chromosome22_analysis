@@ -188,6 +188,47 @@ Mean DP after: 22.3
 - **Variant Annotation** - Integrate tools like VEP (Variant Effect Predictor) or ANNOVAR for functional annotation of variants, identifying their biological impact and association with known disease databases
 - **Machine Learning-based Classification** - Implement ML models to classify variants by pathogenicity, using features like quality scores, allele frequency, and predicted functional effects for automated variant prioritization
 
+## About Dataset 
+This project uses publicly available human genomic sequencing data and reference genome resources.
+
+ Raw Sequencing Data
+
+The raw sequencing reads were obtained from the NCBI Sequence Read Archive (SRA), which provides high-throughput sequencing data from real biological experiments.
+
+-Source: NCBI Sequence Read Archive
+-Format: Paired-end FASTQ files
+-Data Type: Whole Genome Sequencing (WGS)
+
+Example dataset used in this project:
+
+-SRA Accession: SRR362015 (or similar dataset)
+
+These FASTQ files contain raw DNA sequencing reads generated from next-generation sequencing platforms.
+
+Reference Genome
+
+The sequencing reads were aligned against the human reference genome:
+
+-Assembly: GRCh38 (Chromosome 22)
+-Source: GRCh38 reference genome
+-Format: FASTA
+
+The reference genome acts as a standard template for mapping sequencing reads and identifying genetic variations.
+
+Variant Data Generation
+
+After alignment and processing, genetic variants were identified using variant calling tools.
+
+The final output dataset includes:
+
+-SNPs (Single Nucleotide Polymorphisms)
+-INDELs (Insertions and Deletions)
+
+These are stored in:
+
+-variants_table.csv (raw variant calls)
+-high_quality_variants.csv (filtered high-confidence variants)
+
 ## Notes
 
 - Variant positions are 1-based
